@@ -1,0 +1,68 @@
+{"level":"info","message":"users","timestamp":"2022-12-19T23:33:08.140Z"}
+{"level":"info","message":"users","timestamp":"2022-12-19T23:44:04.262Z"}
+{"level":"info","message":"users","timestamp":"2022-12-19T23:54:31.735Z"}
+[info] - users
+[info] - showAllUsers
+{"level":"info","message":"showAllUsers","timestamp":"2022-12-19T23:59:40.655Z"}
+{"level":"info","message":"showAllUsers","timestamp":"2022-12-20T00:00:49.294Z"}
+[INFO   ] - showAllUsers
+[INFO   ] - showAllUsers
+2022-12-20T00:03:28.100Z - [INFO   ] - showAllUsers
+undefined - [INFO   ] - showAllUsers
+2022-12-20T00:04:07.298Z - [INFO   ] - showAllUsers
+2022-12-20T00:04:32.552Z - undefined - [INFO   ] - showAllUsers
+2022-12-20T00:04:56.936Z - function createFormatWrap(opts) {
+    return new Format(opts);
+  } - [INFO   ] - showAllUsers
+2022-12-20T00:05:11.374Z - [object Object] - [INFO   ] - showAllUsers
+2022-12-20T00:05:26.096Z - [INFO   ] - showAllUsers
+2022-12-20T00:14:10.483Z - [INFO   ] - showAllUsers
+2022-12-20T00:18:54.791Z - [ERROR  ] - Not Authorized
+2022-12-20T00:20:13.410Z - [ERROR  ] - Not Authorized
+[ERROR  ] - Not Authorized - 2022-12-20T19:10:03.377Z
+[ERROR  ] - Not Authorized - 2022-12-20T19:10:39.599Z
+[ERROR  ] - Not Authorized - 2022-12-20T21:30:37.499Z
+[INFO   ] - showAllUsers - 2022-12-20T21:30:53.632Z
+[INFO   ] - showAllUsers - 2022-12-20T22:30:55.368Z
+[INFO   ] - showAllUsers - 2022-12-20T23:00:41.016Z
+[INFO   ] - showAllUsers - 2022-12-20T23:01:50.710Z
+[INFO   ] - showAllUsers - 2022-12-20T23:03:56.719Z
+[INFO   ] - showAllUsers - 2022-12-20T23:07:00.438Z
+[INFO   ] - showAllUsers - 2022-12-20T23:07:03.247Z
+[INFO   ] - showAllUsers - 2022-12-20T23:11:04.166Z
+[INFO   ] - showAllUsers - 2022-12-20T23:13:16.678Z
+[INFO   ] - showAllUsers - 2022-12-20T23:13:40.703Z
+[INFO   ] - showAllUsers - 2022-12-20T23:22:38.973Z
+[INFO   ] - showAllUsers - 2022-12-21T00:43:54.116Z
+[INFO   ] - showAllUsers - 2022-12-21T00:46:22.278Z
+[INFO   ] - showAllUsers - 2022-12-21T00:47:20.017Z
+[INFO   ] - showAllUsers - 2022-12-21T00:47:24.593Z
+[INFO   ] - showAllUsers - 2022-12-21T00:47:27.422Z
+[INFO   ] - showAllUsers - 2022-12-21T00:47:28.125Z
+[INFO   ] - showAllUsers - 2022-12-21T00:48:16.764Z
+[ERROR  ] - Not Authorized - 2022-12-21T00:48:40.904Z
+[ERROR  ] - Not Authorized - 2022-12-21T00:48:48.776Z
+[ERROR  ] - Not Authorized - 2022-12-21T00:48:57.144Z
+[INFO   ] - showAllUsers - 2022-12-21T00:49:14.945Z
+[INFO   ] - showAllUsers - 2022-12-21T00:58:16.494Z
+[INFO   ] - showAllUsers - 2022-12-21T00:58:27.955Z
+[INFO   ] - showAllUsers - 2022-12-21T00:58:53.148Z
+[INFO   ] - showAllUsers - 2022-12-21T01:00:13.074Z
+[ERROR  ] - Not Authorized - 2022-12-21T01:01:15.012Z
+[INFO   ] - showAllUsers - 2022-12-21T02:27:58.362Z
+[INFO   ] - show all users - 2022-12-21T02:41:44.327Z
+[INFO   ] - Attend - 2022-12-21T02:47:40.259Z - Omar Abdo
+[INFO   ] - Attend - undefined - undefined
+[INFO   ] - Attend - undefined - undefined
+[INFO   ] - Attend - 2022-12-21T02:51:52.892Z - Omar Abdo
+[INFO   ] - Attend - 2022-12-22T22:07:10.149Z - Omar Abdo
+[INFO   ] - Attend - 2022-12-22T22:08:00.543Z - Omar Abdo
+[INFO   ] - Attend - 2022-12-22T22:08:40.954Z - Omar Abdo
+[INFO   ] - Attend - 2022-12-23T14:13:16.608Z - Omar Abdo
+[INFO   ] - Attend - 2022-12-24T18:22:10.741Z - Omar Abdo
+[INFO   ] - Attend - 2022-12-27T19:06:30.014Z - Omar Abdo
+[INFO   ] - Attend - 2022-12-27T19:08:44.813Z - Omar Abdo
+[INFO   ] - Attend - 2022-12-27T19:09:22.492Z - Omar Abdo
+[ERROR  ] - Not Authorized - 2022-12-29T16:30:58.011Z - undefined
+[ERROR  ] - Not Authorized - 2022-12-29T16:32:59.528Z - undefined
+[ERROR  ] - Not Authorized - 2022-12-29T16:34:54.723Z - undefined

@@ -1,0 +1,35 @@
+{{>header}}
+{{>navbar}}
+<section class="my-5 container">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>name</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#if hasBooks}}
+            {{#each users}}
+            <tr class="
+            {{#if status}} alert alert-success {{else}} alert alert-warning{{/if}}
+            ">
+                <td>{{id}}</td>
+                <td>{{fullname}}</td>
+                <td>
+                    <a href="/api/v1/admin/show/{{id}}" class="btn btn-primary mx-3">show</a>
+                    <a href="/book/edit/{{id}}" class="btn btn-warning mx-3">Edit</a>
+                    <a href="/book/del/{{id}}" class="btn btn-danger mx-3">Delete</a>
+                    <a href="/book/changeStatus/{{id}}" class="btn btn-success mx-3">change status</a>
+                </td>
+            </tr>
+            {{/each}}
+            {{else}}
+            <tr class="alert alert-danger">
+                <td colspan="3" class="text-center">no data  yet</td>
+            </tr>
+            {{/if}}
+        </tbody>
+    </table>
+</section>
+{{>footer}}

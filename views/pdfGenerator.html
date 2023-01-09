@@ -1,0 +1,34 @@
+<html>
+  <head>
+    <title>Conversion of json to PDF and download PDF</title>
+    <script>
+      src = 'https://cdnjs.cloudflare.com/ajax/lib...';
+    </script>
+  </head>
+  <body>
+    <h2>The converted file will be downloaded</h2>
+  </body>
+  <script>
+    const fs = require('fs');
+
+    const examRecords = JSON.parse(
+      fs.readFileSync(`./dev-data/examRecords/record.json`, 'utf-8')
+    );
+    console.log(examRecords);
+
+    // var doc = new jsPDF();
+    // employees.forEach(function (employee, i) {
+    //   doc.text(
+    //     50,
+    //     10 + i * 10,
+    //     'ID : ' +
+    //       employee.ID +
+    //       ' NAME : ' +
+    //       employee.NAME +
+    //       ' AGE : ' +
+    //       employee.AGE
+    //   );
+    // });
+    // doc.save('convertedPDFfromJSON.pdf');
+  </script>
+</html>

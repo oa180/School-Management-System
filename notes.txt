@@ -1,0 +1,7 @@
+=> student attempt*
+
+=> check if record not marked*
+=> check teacher / creator => admin
+=> mark
+=> validate mark
+=> announce
