@@ -1,0 +1,186 @@
+{
+	"info": {
+		"_postman_id": "4012b142-0ed7-4240-942e-c335e4221934",
+		"name": "Admin",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16607797"
+	},
+	"item": [
+		{
+			"name": "Delete User",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}api/v1/user/delete/6398fe0902c5eeda41f9aec3",
+					"host": [
+						"{{URL}}api"
+					],
+					"path": [
+						"v1",
+						"user",
+						"delete",
+						"6398fe0902c5eeda41f9aec3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create New User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n      \"fullname\": \"Mohamed Mahmoud\",\r\n      \"email\": \"mmm@sms.com\",\r\n      \"phone\": \"01146716755\",\r\n      \"dob\": \"2000-07-04\",\r\n      \"gender\": \"male\",\r\n      \"address\": \"107 gamal St\",\r\n      \"bloodType\": \"O+\",     \r\n      \"password\": \"sms123456\",\r\n      \"passwordConfirm\": \"sms123456\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3000/api/v1/user/create",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Show All Users",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{jwt}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}api/v1/admin/show",
+					"host": [
+						"{{URL}}api"
+					],
+					"path": [
+						"v1",
+						"admin",
+						"show"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Assign New Admin",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{jwt}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{URL}}api/v1/admin/assignadmin/639a64d60e84b5c3020013e6",
+					"host": [
+						"{{URL}}api"
+					],
+					"path": [
+						"v1",
+						"admin",
+						"assignadmin",
+						"639a64d60e84b5c3020013e6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Show All Admins",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{jwt}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}api/v1/admin/showadmins",
+					"host": [
+						"{{URL}}api"
+					],
+					"path": [
+						"v1",
+						"admin",
+						"showadmins"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Show Single User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{jwt}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}api/v1/admin/show/639e23580c9e8d2c7415fc09",
+					"host": [
+						"{{URL}}api"
+					],
+					"path": [
+						"v1",
+						"admin",
+						"show",
+						"639e23580c9e8d2c7415fc09"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,113 @@
+{
+	"info": {
+		"_postman_id": "bd799385-f8aa-4b97-9821-d170c04e30ed",
+		"name": "Students",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16607797"
+	},
+	"item": [
+		{
+			"name": "Create New Student",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"currentLevel\": \"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3000/api/v1/student/create/639e23580c9e8d2c7415fc09",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"student",
+						"create",
+						"639e23580c9e8d2c7415fc09"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Show All Students",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{jwt}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}api/v1/student/show",
+					"host": [
+						"{{URL}}api"
+					],
+					"path": [
+						"v1",
+						"student",
+						"show"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Enroll Student in Subject",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{jwt}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}api/v1/student/enroll/63a0d8c1f4d45df4c5a48a2b",
+					"host": [
+						"{{URL}}api"
+					],
+					"path": [
+						"v1",
+						"student",
+						"enroll",
+						"63a0d8c1f4d45df4c5a48a2b"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

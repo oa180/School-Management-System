@@ -1,0 +1,75 @@
+{
+	"info": {
+		"_postman_id": "b130d180-5e44-4bdc-9661-a3c3e573ce0e",
+		"name": "Teachers",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16607797"
+	},
+	"item": [
+		{
+			"name": "Create New Teacher",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"qualification\": [\"Bachelor degree on media and press\"],\r\n    \"joiningDate\" : \"2018-05-02\",\r\n    \"leavingDate\": \"2022-5-30\",\r\n    \"workingHours\": 8\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3000/api/v1/teacher/create/639e167d82cb26e54e803e7a",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"teacher",
+						"create",
+						"639e167d82cb26e54e803e7a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Show All Teachers",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{jwt}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}api/v1/teacher/show",
+					"host": [
+						"{{URL}}api"
+					],
+					"path": [
+						"v1",
+						"teacher",
+						"show"
+					]
+				},
+				"description": "Show all teacher are currently working at the school."
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,77 @@
+{
+	"info": {
+		"_postman_id": "c37f2318-613e-4e64-ba12-a2fe0bceb503",
+		"name": "Classes",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16607797"
+	},
+	"item": [
+		{
+			"name": "Show All Classes",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{jwt}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}api/v1/class/show",
+					"host": [
+						"{{URL}}api"
+					],
+					"path": [
+						"v1",
+						"class",
+						"show"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create New Class",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{jwt}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"className\": \"1\",\r\n    \"classNumber\": \"1\",\r\n    \"teacherInCharge\": \"639e160482cb26e54e803e70\",\r\n    \"capacity\": 50,\r\n    \"students\": [ \"639e19feea0e5ad45d0a39a4\", \"639e1a18ea0e5ad45d0a39a6\", \"639e1a3cea0e5ad45d0a39a8\" ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}api/v1/class/create",
+					"host": [
+						"{{URL}}api"
+					],
+					"path": [
+						"v1",
+						"class",
+						"create"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

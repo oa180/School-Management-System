@@ -1,0 +1,266 @@
+{
+	"info": {
+		"_postman_id": "3722739a-49ec-4c52-ac72-7fee23fd1f5b",
+		"name": "Exams",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16607797"
+	},
+	"item": [
+		{
+			"name": "Create Exam Paper",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{jwt}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "grade",
+							"value": "100",
+							"type": "text"
+						},
+						{
+							"key": "date",
+							"value": "2022-12-20",
+							"type": "text"
+						},
+						{
+							"key": "duration",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "location",
+							"value": "639e284bb7d603cfd51c4c96",
+							"type": "text"
+						},
+						{
+							"key": "semester",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "exam-paper",
+							"type": "file",
+							"src": "/F:/Self Study/Backend/Projects/SMS/dev-data/files/Exam-Arabic-Level 1.pdf"
+						},
+						{
+							"key": "subject",
+							"value": "63a0d877f4d45df4c5a48a22",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{URL}}api/v1/exam/create",
+					"host": [
+						"{{URL}}api"
+					],
+					"path": [
+						"v1",
+						"exam",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Show All Exams",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{jwt}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}api/v1/exam/show",
+					"host": [
+						"{{URL}}api"
+					],
+					"path": [
+						"v1",
+						"exam",
+						"show"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Show an Exam",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}api/v1/exam/show",
+					"host": [
+						"{{URL}}api"
+					],
+					"path": [
+						"v1",
+						"exam",
+						"show"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Exam Record",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{jwt}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"studentId\": \"639e19feea0e5ad45d0a39a4\",\r\n    \"examId\": \"63adc18d17ba7d10abce4608\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}api/v1/exam/takeExam",
+					"host": [
+						"{{URL}}api"
+					],
+					"path": [
+						"v1",
+						"exam",
+						"takeExam"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Mark Exam",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{jwt}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"examRecordId\": \"63ae25813309003c1285fbd7\" ,\r\n    \"mark\": 70\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}api/v1/exam/markstudentexam/639e19feea0e5ad45d0a39a4",
+					"host": [
+						"{{URL}}api"
+					],
+					"path": [
+						"v1",
+						"exam",
+						"markstudentexam",
+						"639e19feea0e5ad45d0a39a4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Class Students Exam Records",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{jwt}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}api/v1/exam/class-exam-records/63aeedabed0ec0c18d4a9e99/exam/63adc17d17ba7d10abce4601",
+					"host": [
+						"{{URL}}api"
+					],
+					"path": [
+						"v1",
+						"exam",
+						"class-exam-records",
+						"63aeedabed0ec0c18d4a9e99",
+						"exam",
+						"63adc17d17ba7d10abce4601"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Show Exam Records",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{jwt}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}api/v1/exam/exam-records/63adc17d17ba7d10abce4601",
+					"host": [
+						"{{URL}}api"
+					],
+					"path": [
+						"v1",
+						"exam",
+						"exam-records",
+						"63adc17d17ba7d10abce4601"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

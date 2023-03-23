@@ -1,0 +1,70 @@
+{
+	"info": {
+		"_postman_id": "1e8662f0-1388-49f6-ab5c-4857ee7dd47f",
+		"name": "Workers",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16607797"
+	},
+	"item": [
+		{
+			"name": "Create New Worker",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"jobType\": \"Driver\" \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3000/api/v1/worker/create/6397aabd9fc22e349a1be578",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"worker",
+						"create",
+						"6397aabd9fc22e349a1be578"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Show All Workers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:3000/api/v1/worker/show",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"worker",
+						"show"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

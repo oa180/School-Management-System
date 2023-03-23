@@ -1,0 +1,161 @@
+{
+	"info": {
+		"_postman_id": "4c68cfd7-97e8-4ac6-9782-375a532049c7",
+		"name": "Authentication",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16607797"
+	},
+	"item": [
+		{
+			"name": "Log In",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.environment.set(\"jwt\", pm.response.json().token);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"oa@sms.com\",\r\n    \"password\": \"sms123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}api/v1/auth/login",
+					"host": [
+						"{{URL}}api"
+					],
+					"path": [
+						"v1",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sign Up",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.environment.set('jwt', pm.response.json().token);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{jwt}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n      \"fullname\": \"Alaa Naser\",\r\n      \"email\": \"an@sms.com\",\r\n      \"phone\": \"01111111160\",\r\n      \"dob\": \"2222-10-22\",\r\n      \"gender\": \"male\",\r\n      \"address\": \"107 gamal St\",\r\n      \"bloodType\": \"B-\",     \r\n      \"password\": \"sms123456\",\r\n      \"passwordConfirm\": \"sms123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}api/v1/auth/signup",
+					"host": [
+						"{{URL}}api"
+					],
+					"path": [
+						"v1",
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Forget Password",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"oa@sms.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}api/v1/auth/forgetpassword",
+					"host": [
+						"{{URL}}api"
+					],
+					"path": [
+						"v1",
+						"auth",
+						"forgetpassword"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Reset Password",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"password\": \"reset1234\",\r\n    \"passwordConfirm\": \"reset1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3000/api/v1/auth/resetpassword/84ef086a3910c158b408eab3a654877e1d0742916bb5304e27fdb00a14b53a0e",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"resetpassword",
+						"84ef086a3910c158b408eab3a654877e1d0742916bb5304e27fdb00a14b53a0e"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

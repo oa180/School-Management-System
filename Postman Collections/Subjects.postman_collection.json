@@ -1,0 +1,89 @@
+{
+	"info": {
+		"_postman_id": "0c327605-7526-425b-af91-1aa542b7257f",
+		"name": "Subjects",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16607797"
+	},
+	"item": [
+		{
+			"name": "Create New Subject",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{jwt}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"subjectCode\": \"AR101\",\r\n    \"subjectName\": \"اللغة العربية\",\r\n    \"division\": \"63a0d7f6d169a387e947e853\",\r\n    \"bookName\": \"اهلا بالعربية\",\r\n    \"teacher\": \"639e170d82cb26e54e803e85\",\r\n    \"grade\": 100\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3000/api/v1/subject/create",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"subject",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Show All Subjects",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{jwt}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:3000/api/v1/subject/show",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"subject",
+						"show"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

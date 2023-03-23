@@ -1,0 +1,286 @@
+{
+	"info": {
+		"_postman_id": "fb7b86e4-0992-48e8-95cf-a79f2d01172c",
+		"name": "Attendance",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16607797"
+	},
+	"item": [
+		{
+			"name": "Show User Attendence",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{jwt}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}api/v1/attendance/user/639e23900c9e8d2c7415fc1a",
+					"host": [
+						"{{URL}}api"
+					],
+					"path": [
+						"v1",
+						"attendance",
+						"user",
+						"639e23900c9e8d2c7415fc1a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Submit Attendance Record",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{jwt}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"date\": \"2022-12-28\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}api/v1/attendance/user/639e2428a335ce1cf5665c8d",
+					"host": [
+						"{{URL}}api"
+					],
+					"path": [
+						"v1",
+						"attendance",
+						"user",
+						"639e2428a335ce1cf5665c8d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Display Attendance Records",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{jwt}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}api/v1/attendance/display?date[lt]=2022-12-27",
+					"host": [
+						"{{URL}}api"
+					],
+					"path": [
+						"v1",
+						"attendance",
+						"display"
+					],
+					"query": [
+						{
+							"key": "fields",
+							"value": "userRef,day",
+							"disabled": true
+						},
+						{
+							"key": "page",
+							"value": "2",
+							"disabled": true
+						},
+						{
+							"key": "sort",
+							"value": "-date,day",
+							"disabled": true
+						},
+						{
+							"key": "date[lt]",
+							"value": "2022-12-27"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Displat Teachers Attendance",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{jwt}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}api/v1/attendance/teacher",
+					"host": [
+						"{{URL}}api"
+					],
+					"path": [
+						"v1",
+						"attendance",
+						"teacher"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Display Students Attendance",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{jwt}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}api/v1/attendance/student",
+					"host": [
+						"{{URL}}api"
+					],
+					"path": [
+						"v1",
+						"attendance",
+						"student"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Display Class Attendence",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{jwt}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}api/v1/attendance/class/63aeedabed0ec0c18d4a9e99",
+					"host": [
+						"{{URL}}api"
+					],
+					"path": [
+						"v1",
+						"attendance",
+						"class",
+						"63aeedabed0ec0c18d4a9e99"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Display Student Attendance",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{jwt}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}api/v1/attendance/student/639e2435a335ce1cf5665c91",
+					"host": [
+						"{{URL}}api"
+					],
+					"path": [
+						"v1",
+						"attendance",
+						"student",
+						"639e2435a335ce1cf5665c91"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Submit Class Attendance",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{jwt}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"date\": \"2022-12-29\",\r\n    \"attendedStudents\": [\"639e1a3cea0e5ad45d0a39a8\", \"639e1a18ea0e5ad45d0a39a6\", \"639e19feea0e5ad45d0a39a4\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}api/v1/attendance/class/63aeedabed0ec0c18d4a9e99",
+					"host": [
+						"{{URL}}api"
+					],
+					"path": [
+						"v1",
+						"attendance",
+						"class",
+						"63aeedabed0ec0c18d4a9e99"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
