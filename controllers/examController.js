@@ -70,6 +70,13 @@ exports.showExam = catchAsync(async (req, res, next) => {
 });
 
 exports.createRecord = catchAsync(async (req, res, next) => {
+  const recordExist = await ExamRecord.findOne({
+    studentId: req.body.studentId,
+    examId: req.body.examId,
+  });
+  if (recordExist)
+    return next(new AppError('You are already took this exam!', 402));
+
   const record = new ExamRecord({
     studentId: req.body.studentId,
     teacherId: req.user.id,

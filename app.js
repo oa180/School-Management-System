@@ -2,6 +2,9 @@ const express = require('express');
 const morgan = require('morgan');
 const path = require('path');
 const hbs = require('hbs');
+const rateLimit = require('express-rate-limit');
+const helmet = require('helmet');
+const xss = require('xss');
 const cookieParser = require('cookie-parser');
 const userRouter = require('./routers/userRouter');
 const studentRouter = require('./routers/studentRouter');
@@ -39,6 +42,18 @@ app.use((req, res, next) => {
   console.log(req.originalUrl);
   next();
 });
+
+app.use(
+  '/api',
+  rateLimit({
+    limit: 100,
+    windowMs: 60 * 60 * 1000,
+    message: 'Too many requsts from the same IP, Please try again later.',
+  })
+);
+
+app.use(helmet());
+app.use(xss());
 
 app.use('/api/v1/user', userRouter);
 app.use('/api/v1/student', studentRouter);

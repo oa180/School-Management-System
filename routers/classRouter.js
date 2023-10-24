@@ -6,5 +6,6 @@ const router = express.Router();
 
 router.post('/create', classController.createNewClass);
 router.get('/show', classController.showAllClasses);
+router.get('/showclass/:cid', classController.showClass);
 
 module.exports = router;

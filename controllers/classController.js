@@ -38,3 +38,13 @@ exports.showAllClasses = catchAsync(async (req, res) => {
   );
   responseMessage(res, '', 201, classes);
 });
+
+exports.showClass = catchAsync(async (req, res) => {
+  const id = req.params.cid;
+  const classRes = await Class.findById(id, 'students').populate({
+    path: 'students',
+    // select: 'students',
+  });
+
+  responseMessage(res, '', 201, classRes);
+});

@@ -28,6 +28,7 @@ router.post(
   authController.restrictTo('admin'),
   examController.createRecord
 );
+
 router.post(
   '/markstudentexam/:id',
   authController.restrictTo('admin', 'teacher'),
