@@ -2,7 +2,7 @@ const User = require('../models/userModel');
 const Admin = require('../models/adminModel');
 const catchAsync = require('../utils/catchAsync');
 const responseMessage = require('../utils/responseMessage');
-const AppError = require('../utils/AppError');
+const AppError = require('../utils/appError');
 
 exports.assignNewAdmin = catchAsync(async (req, res, next) => {
   const user = await User.findById(req.params.id);

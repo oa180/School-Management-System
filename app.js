@@ -53,7 +53,7 @@ app.use(
 );
 
 app.use(helmet());
-app.use(xss);
+app.use(xss());
 
 app.use('/api/v1/user', userRouter);
 app.use('/api/v1/student', studentRouter);
